@@ -1,3 +1,87 @@
+:root {
+    --text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+    --box-shadow: 1px 1px 2px black, 0 0 10px red, 0 0 5px darkred;
+    --label-shadow: 1px 1px 2px white, 0 0 25px red, 0 0 5px darkred;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: black;
+}
+
 .logo-empresa {
-    width: 100px;
+    display: block;
+    width: 300px;
+    border: rgba(36, 38, 39, 0.4) solid 2px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 1.5px red;
+}
+
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.login-principal {
+    background-color: rgba(36, 38, 39, 0.4);
+    width: 300px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 1.5px red;
+}
+
+[class^=login] {
+    color: white;
+    font-size: 15px;
+}
+
+.label {
+    width: 60px;
+    margin-left: 10px;
+    display: inline-block;
+    text-shadow: var(--text-shadow);
+}
+
+.login-titulo {
+    text-align: center;
+    font-size: 40px;
+    text-shadow: var(--text-shadow);
+}
+
+.button_submit {
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: auto;
+    display: block;
+    font-size: 15px;
+    background-color: black;
+    border-style: none;
+    color: white;
+    text-shadow: var(--text-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+article {
+    display: inline-block;
+}
+
+.articulos {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 100px;
+    margin-left: 30px;
+    display: block;
+    font-size: 10px;
+    text-shadow: var(--label-shadow);
 }

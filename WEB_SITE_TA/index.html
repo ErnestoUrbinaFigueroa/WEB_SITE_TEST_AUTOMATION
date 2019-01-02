@@ -9,43 +9,42 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Página de Pruebas Automatizadas</title>
 </head>
-<body>
+<body class="body">
 <header>
-    <div><img class="logo-empresa" src="./images/Red_Ribbon_Logo.png" alt="Red Ribbon"></div>
+    <div class="header"><img class="logo-empresa" src="./images/rr_army.jpg" alt="Red Ribbon"></div>
 </header>
-<h1>Sistema de Dominación Mundial</h1>
+<h1 class="login-titulo">Sistema de Dominación Mundial</h1>
 <main>
-    <div>
-        <h2>...-:Login:-...</h2>
-    </div>
-    <div>
-        <form onsubmit="enviar()">
-            <div>
-                <label>User: </label>
-                <input name="usuario" type="text">
-            </div>
-            <div>
-                <label>Password: </label>
-                <input name="password" type="password"></div>
-            <button type="submit">Ingresar</button>
-        </form>
+    <div class="login-principal">
+        <div>
+            <h2 class="login-titulo">...-:Login:-...</h2>
+        </div>
+        <div class="login-formulario">
+            <form id="envio" onsubmit="enviar(this);">
+                <div>
+                    <label class="label">User: </label>
+                    <input name="usuario" id="usuario" type="text" required>
+                </div>
+                <div>
+                    <label class="label">Password: </label>
+                    <input name="password" id="password" type="password" required></div>
+                <button class="button_submit" type="submit">Ingresar</button>
+            </form>
+        </div>
     </div>
 </main>
-<footer>
-    <div>Author: Ernesto Urbina Figueroa</div>
-    <div>Fecha: Diciembre 2018</div>
+<footer class="footer">
+    <div>Ernesto Urbina Figueroa</div>
+    <div>Enero 2019</div>
 </footer>
-<script type="javascript">
-    function enviar() {
-        alert("0");
-        var user = document.getElementsByName("usuario").values();
-        var pass = document.getElementsByName("password").value();
-        if (user == "admin") {
-            window.location = "./main_page.html";
-            alert("1");
+<script type="text/javascript">
+    function enviar(form) {
+        let nombre = document.getElementById("usuario").value;
+        let pass = document.getElementById("password").value;
+        if (nombre == "admin" && pass == "123") {
+            form.action = "main_page.html";
         } else {
-            window.location = "./error_login.html";
-            alert("2");
+            form.action = "error_login.html";
         }
     }
 </script>

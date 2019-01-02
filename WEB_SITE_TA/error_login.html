@@ -9,15 +9,23 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Error de Login</title>
 </head>
-<body>
+<body class="body">
 <header>
-    <div><img class="logo-empresa" src="./images/Red_Ribbon_Logo.png" alt="Red Ribbon"></div>
+    <div>
+        <input type="button" class="button_submit" value="Volver" onclick="volver();">
+    </div>
+    <div><img class="logo-empresa" src="./images/rr_army.jpg" alt="Red Ribbon"></div>
 </header>
-<h1>Red Ribbon</h1>
-<h2>Error, user o password icorrectos</h2>
-<footer>
-    <div>Author: Ernesto Urbina Figueroa</div>
-    <div>Fecha: Diciembre 2018</div>
+<h1 class="login-titulo">ALERTA!!</h1>
+<h2 class="login-titulo">Error; user o password incorrectos</h2>
+<footer class="footer">
+    <div>Ernesto Urbina Figueroa</div>
+    <div>Diciembre 2018</div>
 </footer>
+<script type="text/javascript">
+    function volver() {
+        document.location = "index.html";
+    }
+</script>
 </body>
 </html>
